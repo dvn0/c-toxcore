@@ -49,3 +49,9 @@ jobs:
             -DAUTOTEST=ON
 
             cmake --build _build --parallel "$(nproc)" --target install -- -k 0
+      - name: test
+        run: |
+          cd _build # pushd \
+          ctest -j$(nproc) --output-on-failure || \
+          ctest -j$(nproc) --output-on-failure --rerun-failed \
+          cd - # popd
