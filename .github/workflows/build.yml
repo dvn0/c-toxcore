@@ -22,6 +22,16 @@ jobs:
       - name: install deps
         run: |
           sudo apt-get install -y --no-install-recommends \
+          clang
+          cmake
+          libconfig-dev
+          libgtest-dev
+          libopus-dev
+          libsodium-dev
+          libvpx-dev
+          llvm-dev
+          ninja-build
+          pkg-config
           ninja-build \
           && sudo rm -rf /var/lib/apt/lists/*
       - name: build
