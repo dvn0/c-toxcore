@@ -22,14 +22,14 @@ jobs:
       - name: install deps
         run: |
           sudo apt-get install -y --no-install-recommends \
-          cmake
-          libconfig-dev
-          libgtest-dev
-          libopus-dev
-          libsodium-dev
-          libvpx-dev
-          ninja-build
-          pkg-config
+          cmake \
+          libconfig-dev \
+          libgtest-dev \
+          libopus-dev \
+          libsodium-dev\
+          libvpx-dev \
+          ninja-build \
+          pkg-config \
           ninja-build \
           && sudo rm -rf /var/lib/apt/lists/*
       - name: build
